@@ -6,10 +6,10 @@
 </head>
 <body>
     <ul>
-        <li th:each="dto : ${list}">
-            [[${dto}]]
-        </li>
-
+        <li th:each="dto, state :${list}" th:text="${dto.sno % 5 == 0}?${dto.sno} : ${dto.first}"></li>
+<!--        <li th:each="dto : ${list}">-->
+<!--            [[${dto}]]-->
+<!--        </li>-->
     </ul>
 </body>
 </html>
